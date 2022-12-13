@@ -1,4 +1,4 @@
-let op = parseInt(prompt("Enter an operation"));
+let op = prompt("Enter an operation");
 let num1 = parseInt(prompt("Enter a first number"));
 let num2 = parseInt(prompt("Enter a second number"));
 

@@ -1,38 +1,45 @@
-let randomNumber = Math.random();
-randomNumber = randomNumber * 3;
-randomNumber = Math.floor(randomNumber);
+let choises = ["rock", "paper", "scissors"];
+let computerChoise = Math.floor(Math.random() * 3);
 
-let compChoice = "Computer selection is: ";
+let playerChoise = Math.floor(Math.random() * 3);
 
-if (randomNumber === 0) {
-  compChoice += "rock";
-} else if (randomNumber === 1) {
-  compChoice += "paper";
-} else if (randomNumber === 2) {
-  compChoice += "scissors";
+let showChoise = choises[computerChoise];
+
+console.log("Computer choise: " + showChoise);
+
+showChoise = choises[playerChoise];
+console.log("Player choise: " + showChoise);
+
+if (choises[computerChoise] === choises[playerChoise]) {
+  console.log("It`s a tie!!");
+} else if (
+  choises[computerChoise] === "rock" &&
+  choises[playerChoise] === "paper"
+) {
+  console.log("Player wins");
+} else if (
+  choises[computerChoise] === "paper" &&
+  choises[playerChoise] === "scissors"
+) {
+  console.log("Player wins");
+} else if (
+  choises[computerChoise] === "scissors" &&
+  choises[playerChoise] === "rock"
+) {
+  console.log("Player wins");
+} else if (
+  choises[playerChoise] === "rock" &&
+  choises[computerChoise] === "paper"
+) {
+  console.log("Computer wins");
+} else if (
+  choises[playerChoise] === "paper" &&
+  choises[computerChoise] === "scissors"
+) {
+  console.log("Computer wins");
+} else if (
+  choises[playerChoise] === "scissors" &&
+  choises[computerChoise] === "rock"
+) {
+  console.log("Computer wins");
 }
-
-console.log(compChoice);
-
-let userChoice = prompt("Choose rock paper or scissors");
-
-console.log(`User selection is: ${userChoice} `);
-let result = "The winner is: ";
-
-function compare() {
-  if (userChoice == compChoice) {
-    console.log("The result is a tie!");
-  } else if (
-    (userChoice == "rock" && compChoice == "scissors") ||
-    (userChoice == "paper" && compChoice == "rock") ||
-    (userChoice == "scissors" && compChoice == "paper")
-  ) {
-    console.log("You win!");
-  } else {
-    console.log("You lose!");
-  }
-}
-
-console.log("Your choice = " + userChoice);
-console.log("Computer Choice = " + compChoice);
-compare();
