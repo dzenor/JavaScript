@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 4</title>
+  </head>
+  <body>
+    <p class="example">First paragraph!</p>
+    <p class="example">Second paragraph!</p>
+    <div>
+      <p class="example">Third paragraph!</p>
+    </div>
+
+    <script>
+      let exampleArr = document.getElementsByClassName("example");
+
+      for (let i = 0; i < exampleArr.length; i++) {
+        const element = exampleArr[i];
+        element.style.color = "red";
+      }
+    </script>
+  </body>
+</html>
