@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complete JavaScript Course</title>
+  </head>
+  <body>
+    <div id="message"></div>
+    <div id="output">
+      <h1>My Friends table</h1>
+      <!-- <table>
+        <tr>
+            <td>Boban</td>
+            <td>1</td>
+        </tr>
+    </table> -->
+    </div>
+    <script>
+      let names = ["John", "Tom", "Bob", "Marc"];
+      let message = document.getElementById("message");
+      let output = document.getElementById("output");
+
+      function build() {
+        let html = document.createElement("table");
+
+        names.forEach((element, i) => {
+          console.log(element);
+          let row = document.createElement("tr");
+          let nameDescription = document.createElement("td");
+          nameDescription.textContent = element;
+
+          let index = document.createElement("td");
+          index.textContent = i + 1;
+
+          row.appendChild(nameDescription);
+          row.appendChild(index);
+          html.appendChild(row);
+          row.addEventListener("click", showMessage);
+        });
+        output.appendChild(html);
+      }
+      function showMessage() {
+        let messageRow = `${this.children[0].innerText} is in row #${this.children[1].innerText}`;
+        message.textContent = messageRow;
+      }
+      build();
+    </script>
+  </body>
+</html>
