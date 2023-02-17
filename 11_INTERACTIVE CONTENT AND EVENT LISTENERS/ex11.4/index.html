@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+    <script>
+      let myDiv = document.getElementById("myDiv");
+      myDiv.innerText = "HELLO WORLD";
+      myDiv.style.height = "50px";
+      myDiv.style.width = "150px";
+      myDiv.style.backgroundColor = "blue";
+
+      function changeColor(element, color) {
+        console.log(color, element);
+        element.style.backgroundColor = color;
+      }
+
+      myDiv.addEventListener("mouseover", function () {
+        changeColor(this, "green");
+      });
+      myDiv.addEventListener("mouseup", function () {
+        changeColor(this, "blue");
+      });
+      myDiv.addEventListener("mouseout", function () {
+        changeColor(this, "red");
+      });
+      myDiv.addEventListener("mouseout", function () {
+        changeColor(this, "yellow");
+      });
+
+      document.body.appendChild(myDiv);
+    </script>
+  </body>
+</html>

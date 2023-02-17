@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complete JavaScript Course</title>
+  </head>
+  <body>
+    <div id="output">Complete JavaScript Course</div>
+    Search for:
+    <input id="sText" type="text" />
+    <br />
+    Replace with:
+    <input id="rText" type="text" />
+    <br />
+    <button>Replace</button>
+    <script>
+      let output = document.getElementById("output");
+      let findValue = document.getElementById("sText");
+      let replaceValue = document.getElementById("rText");
+      let button1 = document.querySelector("button");
+
+      button1.addEventListener("click", lookup);
+
+      function lookup() {
+        console.log(findValue.value);
+        console.log(replaceValue.value);
+        let s = output.textContent;
+        let rt = replaceValue.value;
+        let re = new RegExp(findValue.value, "gi");
+        if (s.match(re)) {
+          let newValue = s.replace(re, rt);
+          output.textContent = newValue;
+        }
+      }
+    </script>
+    ​
+  </body>
+</html>

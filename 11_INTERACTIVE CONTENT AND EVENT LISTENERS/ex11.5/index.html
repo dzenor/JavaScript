@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exercise 11.5</title>
+  </head>
+  <body>
+    <div class="output"></div>
+    <input type="text" name="message" placeholder="Your Message" />
+    <button class="btn1">Button 1</button>
+    <button class="btn2">Button 2</button>
+    <div>
+      <button class="btn3">Log</button>
+    </div>
+    <script>
+      let output = document.querySelector(".output");
+      let input = document.querySelector("input");
+      let btn1 = document.querySelector(".btn1");
+      let btn2 = document.querySelector(".btn2");
+
+      let log = [];
+
+      document.addEventListener("click", (event) => {
+        log.push(event);
+        console.log(log);
+      });
+    </script>
+  </body>
+</html>

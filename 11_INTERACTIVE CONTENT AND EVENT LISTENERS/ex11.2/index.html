@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello</h1>
+    </div>
+
+    <div>
+      <h1>dzenis</h1>
+    </div>
+
+    <div>
+      <h1>redzovic</h1>
+    </div>
+
+    <script>
+      const myDiv = document.getElementsByTagName("div")[0];
+
+      const p = document.createElement("p");
+      p.innerText = "blue";
+      p.addEventListener("click", changeBackgroundColor);
+      myDiv.appendChild(p);
+
+      const myDiv1 = document.getElementsByTagName("div")[1];
+
+      const p1 = document.createElement("p");
+      p1.innerText = "red";
+      p1.addEventListener("click", changeBackgroundColor);
+      myDiv1.appendChild(p1);
+
+      const myDiv2 = document.getElementsByTagName("div")[2];
+
+      const p2 = document.createElement("p");
+      p2.innerText = "yellow";
+      p2.addEventListener("click", changeBackgroundColor);
+      myDiv2.appendChild(p2);
+
+      function changeBackgroundColor() {
+        this.style.backgroundColor = this.innerText;
+      }
+    </script>
+  </body>
+</html>
