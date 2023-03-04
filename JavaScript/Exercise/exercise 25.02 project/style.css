@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: rgb(21, 61, 16);
+  height: 60px;
+  padding: 10px 10px;
+  position: sticky;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+ul li:hover {
+  color: rgb(21, 61, 16);
+  background-color: white;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.footer-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.home {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: url(assets/pexels-elijah-o\'donnell-3473569.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.typewriter span {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+}
+span {
+  font-size: 30px;
+  color: white;
+}
+
+.home-container {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 250px;
+}
+
+.about {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: url(assets/pexels-fox-1172675.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-text {
+  color: white;
+  font-size: 20px;
+  padding-left: 140px;
+  padding-right: 140px;
+  position: absolute;
+  bottom: 0;
+  top: 60px;
+}
+
+.services {
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.bg {
+  object-fit: contain;
+}
+
+.carousel {
+  width: 640px;
+  height: 360px;
+}
+
+.our-team {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.contact-us {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: aquamarine;
+}
+
+form {
+  max-width: 400px;
+}
+
+.d-block {
+  display: block;
+}
