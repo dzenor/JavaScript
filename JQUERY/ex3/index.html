@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: space-around;
+        background-color: cadetblue;
+      }
+      span {
+        display: block;
+        width: 200px;
+        height: 200px;
+        padding: 50px 0px;
+        background-color: crimson;
+      }
+
+      a {
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        background-color: chartreuse;
+        box-sizing: border-box;
+      }
+      p {
+        width: 200px;
+        height: 200px;
+        background-color: cyan;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      #searchBar {
+        background-color: blanchedalmond;
+        width: 172px;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>
+        <a href=""></a>
+      </span>
+      <p></p>
+    </div>
+    <hr />
+    <input type="text" />
+    <ul id="searchBar"></ul>
+    <ul>
+      <button id="clickFade">Fade</button>
+      <p id="fade">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+        provident incidunt voluptas impedit dicta laborum harum placeat hic
+        aspernatur autem voluptates temporibus optio, repellendus fuga magnam
+        pariatur excepturi asperiores error?
+      </p>
+    </ul>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let colors = [
+        "blue",
+        "red",
+        "green",
+        "light green",
+        "dark green",
+        "light blue",
+        "dark blue",
+      ];
+      $("div").click(function (e) {
+        let display = $(this).css("display");
+        console.log(display);
+        if (display === "flex") {
+          $(this).css("display", "inline");
+        }
+        console.log("Div clicked!");
+      });
+      $("span").click(function (e) {
+        console.log("Span clicked!");
+      });
+      $("a").click(function (e) {
+        e.preventDefault();
+        console.log("A clicked!");
+        e.stopPropagation();
+      });
+      $("p").click(function (e) {
+        console.log("P clicked!");
+      });
+      $("input").keyup(function (event) {
+        $("#searchBar").html("");
+        let value = $(this).val();
+        console.log(value);
+        console.log();
+        let filteredArray = colors.filter((x) => x.includes(value));
+        filteredArray.forEach((element) => {
+          $("#searchBar").append(`<li>${element}</li>`);
+        });
+      });
+      let fontSize = parseFloat($("#searchBar").css("font-size"));
+      console.log(fontSize);
+      fontSize *= 1.4;
+      $("#searchBar").css("font-size", fontSize + "px");
+
+      $("#clickFade").click(function (e) {
+        e.preventDefault();
+        $("#fade").fadeToggle("slow");
+      });
+    </script>
+  </body>
+</html>
