@@ -1,0 +1,63 @@
+.container {
+    text-align: center;
+}
+
+body {
+    background-color: crimson;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 5px;
+
+
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+button {
+    border-radius: 50%;
+    padding: 20px;
+}
+
+#btnYes {
+    background-color: green;
+}
+
+#btnNo {
+    background-color: red;
+}
+
+.d-none {
+    display: none;
+}
+
+.coctail-container {
+    text-align: center;
+}
+
+.card {
+    width: 400px;
+    height: 600px;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 250px;
+}
+
+h3 {
+    color: #fff;
+    text-align: left;
+}
